@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 
+
 // Models
 use App\Models\Project;
 
@@ -15,7 +16,10 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        
+        $projects = Project::all();
+
+        return view('admin.projects.index', compact('projects'));
     }
 
     /**
@@ -39,7 +43,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
+        return view('admin.projects.show', compact('show'));
     }
 
     /**
