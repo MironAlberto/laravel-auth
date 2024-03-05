@@ -12,9 +12,9 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
                 <div class="container">
-                    <a class="navbar-brand" href="/">Template</a>
+                    <a class="navbar-brand" href="/">Homepage</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -24,16 +24,17 @@
                                 <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('admin.projects.index') }}">Homepage</a>
+                                <a class="nav-link" href="{{ route('admin.projects.index') }}">My Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"></a>
+                                <a class="nav-link" href="{{ route('admin.projects.create') }}"> Add Project</a>
                             </li>
                         </ul>
+
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
-                            <button type="submit" class="btn btn-outline-danger">
+                            <button type="submit" class="btn btn-outline-light">
                                 Log Out
                             </button>
                         </form>
