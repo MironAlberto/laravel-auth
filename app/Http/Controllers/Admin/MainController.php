@@ -18,12 +18,7 @@ class MainController extends Controller
 
     public function welcome()
     {
-        // $user = Auth::user();
-
-        // $welcomeUser = $user->name;
-
         return view('admin.welcome');
-
     }
 
 }
