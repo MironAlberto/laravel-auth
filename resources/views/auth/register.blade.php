@@ -2,6 +2,17 @@
 
 @section('main-content')
     <div class="text-center">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <div class="mb-0">
+                    @foreach ($errors->all() as $error)
+                        <div>
+                            {{ $error }}
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        @endif
         <form method="POST" action="{{ route('register') }}">
             @csrf
     

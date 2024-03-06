@@ -1,11 +1,22 @@
 @extends('layouts.guest')
 
 @section('main-content')
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+    <div class="text-center">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <div class="mb-0">
+                    @foreach ($errors->all() as $error)
+                        <div>
+                            {{ $error }}
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        @endif
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
 
-        <!-- Email Address -->
-        <div class="text-center">
+            <!-- Email Address -->
             <div>
                 <label for="email" class="fw-bolder">
                     Email
@@ -14,7 +25,7 @@
                     <input type="email" id="email" name="email">
                 </div>
             </div>
-    
+
             <!-- Password -->
             <div class="mt-4">
                 <label for="password" class="fw-bolder">
@@ -24,7 +35,7 @@
                     <input type="password" id="password" name="password">
                 </div>
             </div>
-    
+
             <!-- Remember Me -->
             <div class="mt-4">
                 <label for="remember_me">
@@ -32,7 +43,7 @@
                     <span class="fw-bolder">Remember me</span>
                 </label>
             </div>
-    
+
             <div class="mt-4">
                 <button class="btn btn-outline-light fw-bolder" type="submit">
                     Log in
@@ -46,6 +57,6 @@
                     @endif
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 @endsection

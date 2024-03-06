@@ -42,7 +42,7 @@
                 @enderror
             </div>
 
-            <div class="mb-3">
+            {{-- <div class="mb-3">
                 <label for="slug" class="form-label fw-bolder">SLUG</label>
                 <input value="{{ old('slug') }}" type="text" class="form-control" @error('slug') is-invalid @enderror id="slug" name="slug" placeholder="Add your Project SLUG..." max="255">
                 @error('slug')
@@ -50,7 +50,7 @@
                         {{ $message }}
                     </div>
                 @enderror
-            </div>
+            </div> --}}
 
             <div>
                 <button type="submit" class="btn btn-dark w-100 fw-bolder">

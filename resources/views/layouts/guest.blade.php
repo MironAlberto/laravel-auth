@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>@yield('page-title') | {{ config('app.name', 'Laravel') }}</title>
 
         <!-- Scripts -->
         @vite('resources/js/app.js')
@@ -31,6 +31,9 @@
                                     <a class="nav-link" href="{{ route('admin.projects.create') }}">Add Project</a>
                                 </li>
                             @else
+                                {{-- <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('projects.index') }}">Our Projects</a>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">Login</a>
                                 </li>
@@ -44,7 +47,7 @@
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
 
-                                <button type="submit" class="btn btn-outline-light">
+                                <button type="submit" class="btn btn-outline-light fw-bolder">
                                     Log Out
                                 </button>
                             </form>

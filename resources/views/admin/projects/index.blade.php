@@ -13,13 +13,12 @@
 
                     <div>
                         <table class="table table-dark">
-                            <thead class="text-center">
+                            <thead>
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">URL</th>
                                     <th scope="col">Title</th>
-                                    <th scope="col">Slug</th>
-                                    <th scope="col" colspan="2">Actions</th>
+                                    <th scope="col" colspan="2" class="text-center">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -28,9 +27,8 @@
                                         <th scope="row">{{ $project->id }}</th>
                                         <td>{{ $project->url }}</td>
                                         <td>{{ $project->title }}</td>
-                                        <td>{{ $project->slug }}</td>
                                         <td>
-                                            <a href="{{ route('admin.projects.show', ['project' => $project->slug]) }}" class="btn btn-xs btn-light text-dark fw-bolder">
+                                            <a href="{{ route('admin.projects.show', ['project' => $project->id]) }}" class="btn btn-xs btn-light text-dark fw-bolder">
                                                 Show
                                             </a>
                                         </td>

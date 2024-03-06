@@ -47,15 +47,6 @@
                         {{ $project->title }}
                     </h1>
 
-                    <h2 class="mb-5">
-                        <div>
-                            SLUG:
-                        </div>
-                        <span class="text-light">
-                            {{ $project->slug }}
-                        </span>
-                    </h2>
-
                     <h3 class="mb-5">
                         <div>
                             CONTENT:
